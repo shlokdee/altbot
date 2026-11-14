@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bw5agdrvqvvyc"]
+
+[ext_resource type="PackedScene" uid="uid://g55xfyblxl42" path="res://altbot.tscn" id="1_f3sb7"]
+
+[sub_resource type="Environment" id="Environment_pr333"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pr333"]
+size = Vector3(10, 0.5, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pr333"]
+size = Vector3(10, 0.5, 50)
+
+[node name="World" type="Node3D" unique_id=1165052283]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=974605297]
+environment = SubResource("Environment_pr333")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1978386038]
+transform = Transform3D(0.7156309, 0.45917466, -0.52633744, -0.36990044, 0.888346, 0.27205706, 0.59249145, 0, 0.80557674, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=784221819]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=854509898]
+mesh = SubResource("BoxMesh_pr333")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1511643324]
+shape = SubResource("BoxShape3D_pr333")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=941771834]
+transform = Transform3D(1, 0, 0, 0, 0.85533804, 0.5180703, 0, -0.5180703, 0.85533804, 0, 4, 7)
+
+[node name="Player" parent="." unique_id=1265561642 instance=ExtResource("1_f3sb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8904114, 0)
