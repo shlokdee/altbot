@@ -1,3 +1,4 @@
-res://world.tscn
-res://altbot.tscn
 res://altbot.gd
+res://floor.tscn
+res://world.tscn
+res://track_manager.gd

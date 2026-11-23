@@ -1,14 +1,10 @@
 [gd_scene format=3 uid="uid://bw5agdrvqvvyc"]
 
 [ext_resource type="PackedScene" uid="uid://g55xfyblxl42" path="res://altbot.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://dka8af5da04jg" path="res://floor.tscn" id="1_fj7yv"]
+[ext_resource type="Script" uid="uid://6qra6qqqeb7l" path="res://track_manager.gd" id="2_tlwt5"]
 
 [sub_resource type="Environment" id="Environment_pr333"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_pr333"]
-size = Vector3(10, 0.5, 50)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_pr333"]
-size = Vector3(10, 0.5, 50)
 
 [node name="World" type="Node3D" unique_id=1165052283]
 
@@ -18,16 +14,23 @@ environment = SubResource("Environment_pr333")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1978386038]
 transform = Transform3D(0.7156309, 0.45917466, -0.52633744, -0.36990044, 0.888346, 0.27205706, 0.59249145, 0, 0.80557674, 0, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=784221819]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=854509898]
-mesh = SubResource("BoxMesh_pr333")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1511643324]
-shape = SubResource("BoxShape3D_pr333")
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=941771834]
-transform = Transform3D(1, 0, 0, 0, 0.85533804, 0.5180703, 0, -0.5180703, 0.85533804, 0, 4, 7)
+transform = Transform3D(0.99987644, -0.015432328, -0.0030163722, 0.01339749, 0.7356718, 0.6772056, -0.008231801, -0.67716235, 0.73578763, 0, 6.1738625, 28.778267)
+fov = 79.2
 
 [node name="Player" parent="." unique_id=1265561642 instance=ExtResource("1_f3sb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8904114, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8904114, 25.793415)
+
+[node name="TrackManager" type="Node3D" parent="." unique_id=1508480447]
+script = ExtResource("2_tlwt5")
+
+[node name="StaticBody3D" parent="TrackManager" unique_id=207426142 instance=ExtResource("1_fj7yv")]
+
+[node name="StaticBody3D2" parent="TrackManager" unique_id=213039858 instance=ExtResource("1_fj7yv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -40)
+
+[node name="StaticBody3D3" parent="TrackManager" unique_id=594262590 instance=ExtResource("1_fj7yv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -80)
+
+[node name="StaticBody3D4" parent="TrackManager" unique_id=2125976702 instance=ExtResource("1_fj7yv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -120)

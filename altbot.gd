@@ -40,7 +40,7 @@ func _physics_process(delta: float) -> void:
 	
 	var target_x=current_lane*LANE_WIDTH
 	
-	position.x=lerp(position.x,target_x,15.0*delta)
+	velocity.x=(target_x-position.x)*15.0
 	move_and_slide()
 	
 func start_ducking() ->void:

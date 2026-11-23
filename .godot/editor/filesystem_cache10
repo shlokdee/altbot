@@ -1,7 +1,13 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1794654064
+::res://::1795455326
+altbot.gd::GDScript::2369532891777050544::1794656915::0::1::::<>CharacterBody3D<><>0<>0<><>::
+altbot.tscn::PackedScene::484927277245903657::1794655437::0::1::::<><><>0<>0<><>::uid://8024i1pg7yei::::res://altbot.gd
 README.md::TextFile::-1::1794653360::0::1::::<><><>0<>0<><>::
-::res://addons/::1794653938
+world.tscn::PackedScene::3992517475923137422::1794657148::0::1::::<><><>0<>0<><>::uid://g55xfyblxl42::::res://altbot.tscn
+::res://addons/::1794657078
+::res://addons/godot-git-plugin/::1794657079
+git_plugin.gdextension::GDExtension::2819032860179940069::1794657078::0::1::::<><><>0<>0<><>::
+::res://addons/godot-git-plugin/lib/::1794657079
 ::res://addons/godot_super-wakatime/::1794653938
 api_key_prompt.tscn::PackedScene::3919262858641749045::1794653938::0::1::::<><><>0<>0<><>::
 counter.tscn::PackedScene::6849360014225833986::1794653938::0::1::::<><><>0<>0<><>::
